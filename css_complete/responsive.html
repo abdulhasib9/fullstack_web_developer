@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>responsive design</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-column: 1fr 1fr;
+            grid-row: 100px 200px 100px;
+            gap:30px;
+        }
+        .card {
+            height: 100px;
+            background-color: blue;
+        }
+        @media (max-width:300px) {
+            .card{
+                height: 50px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="grid-container">
+        <div class="first-row"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
 </body>
 </html>
