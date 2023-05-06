@@ -1,4 +1,4 @@
-var random = Math.random();
+let random = Math.random();
 random=random*5;
 console.log(random)
 
