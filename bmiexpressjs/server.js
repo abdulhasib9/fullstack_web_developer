@@ -12,6 +12,7 @@ app.post("/",(req,res)=>{
     let weight = parseFloat(req.body.weight)
     let height = parseFloat(req.body.height)
     let result = weight /(height* height)
+
    // console.log(result)
     res.send("Your BMI is : "+result)
 
