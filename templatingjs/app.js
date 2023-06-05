@@ -3,7 +3,8 @@ const bodyParser = require("body-parser")
 const app = express()
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended:true}))
-let items =[]
+app.use(express.static("public"))
+let items =["go to gym","eat food"]
 app.get("/",(req,res)=>{
 
     let today = new Date()
