@@ -10,5 +10,26 @@
     <h1>TO DO List with ejs</h1>
     <hr>
    <h1><%= currentDayType%></h1>
+
+   <hr>
+   <h2>TODO List</h2>
+   <ul>
+    <li>Buy food</li>
+    <li>Eat Food</li>
+    <li>Cook Food</li>
+    <li><%= newItem %></li>
+
+    <% for( let index = 0; index < newItem.length; index++ ) { %>
+    <li><%= newItem[index] %></li>
+    <% } %>
+   </ul>
+
+   <form action="/add" method="post">
+        <label for="additem">
+            Add Todo 
+        </label>
+        <input type="text"  id="additem" name="addInput">
+        <button type="submit">Add</button>
+   </form>
 </body>
 </html>
