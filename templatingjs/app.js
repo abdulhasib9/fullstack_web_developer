@@ -5,14 +5,17 @@ app.set("view engine", "ejs")
 
 app.get("/",(req,res)=>{
 
-    let currentDate = new Date()
-    let today = currentDate.getDay()
-    let day =""
-    if(today ===4){
-        day ="Horry its Weekend"
-    }else{
-        day="opp's it work day"
+   
+    let today = new Date()
+    let options={
+        weekday:"long",
+        day:"numeric",
+        month:"long"
     }
+
+    let day = today.toLocaleDateString("en-US",options)
+
+
     res.render("todo",{currentDayType:day})
 
     //res.sendFile(__dirname+"/index.html")
